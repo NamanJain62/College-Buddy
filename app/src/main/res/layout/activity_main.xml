@@ -7,96 +7,10 @@
     android:background="#fafafa">
 
     <ImageView
-        android:id="@+id/imgAvenger"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
-
-    <EditText
-        android:id="@+id/etMobileNumber"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imgAvenger"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:inputType="number"
-        android:maxLength="10"
-        android:maxLines="1"
-        android:textColor="#bdbdbd"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:src="@drawable/main2">
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/etMobileNumber"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:inputType="textPassword"
-        android:textColor="#bdbdbd"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/branch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/etPassword"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:inputType="textPassword"
-        android:textColor="#bdbdbd"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/Preference"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/branch"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:inputType="textPassword"
-        android:textColor="#bdbdbd"
-        android:textStyle="bold" />
-
-
-    <EditText
-        android:id="@+id/kjnsdnc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Preference"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:inputType="textPassword"
-        android:textColor="#bdbdbd"
-        android:textStyle="bold" />
-
-
-    <Button
-        android:id="@+id/btnLogIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/kjnsdnc"
-        android:backgroundTint="#b71c1c"
-        android:text="Log in"
-        android:textSize="20sp" />.
-
-    <TextView
-        android:id="@+id/txtForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnLogIn"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="15dp"/>
-
-    <TextView
-        android:id="@+id/txtRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="30dp"
-        android:textSize="16sp"/>
-
+    </ImageView>
 
 </RelativeLayout>
