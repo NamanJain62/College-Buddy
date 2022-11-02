@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class HomePage : AppCompatActivity() {
-    var titleName: String? = "The Avengers"
+    var titleName: String? = "College Buddy"
     lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -28,18 +28,15 @@ class login_activity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
         val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn",false)
-
         setContentView(R.layout.login_activity)
 
         if(isLoggedIn){
             val intent= Intent(this@login_activity,HomePage::class.java)
             startActivity(intent)
-            finish()
         }else{
             setContentView(R.layout.login_activity)
         }
-
-        setContentView(R.layout.login_activity)
+        title = "Login Page"
 
         btnusrnme = findViewById(R.id.btnusrnme)
         btnpsswrd = findViewById(R.id.btnpsswrd)
@@ -52,7 +49,7 @@ class login_activity : AppCompatActivity() {
             val password = btnpsswrd.text.toString()
             val intent = Intent(this@login_activity, HomePage::class.java)
 
-            if ((username == validusrnme && password == validpsswrd)) {
+            if ((username == validusrnme)) {
 
                 when (password) {
                     validpsswrd -> {
