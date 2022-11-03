@@ -24,18 +24,20 @@ class login_activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
-        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn",false)
         setContentView(R.layout.login_activity)
 
-        if(isLoggedIn){
-            val intent= Intent(this@login_activity,HomePage::class.java)
+        val sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),
+            Context.MODE_PRIVATE
+        )
+
+        if(sharedPreferences.getBoolean("isLoggedIn",false)){
+            val intent = Intent(this@login_activity,HomePage::class.java)
             startActivity(intent)
-        }else{
+            finish()
+        }else {
             setContentView(R.layout.login_activity)
         }
+
         title = "Login Page"
 
         btnusrnme = findViewById(R.id.btnusrnme)
@@ -54,9 +56,9 @@ class login_activity : AppCompatActivity() {
                 when (password) {
                     validpsswrd -> {
                         name = "Naman Jain"
-                        savePreferences(name)
                         intent.putExtra("Name", name)
                         startActivity(intent)
+                        finish()
                     }
                     else -> Toast.makeText(this@login_activity, "Correct Password", Toast.LENGTH_LONG).show()
                 }
@@ -70,15 +72,6 @@ class login_activity : AppCompatActivity() {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
-        finish()
-    }
-
-    fun savePreferences(title: String){
-        sharedPreferences.edit().putString("title",title).apply()
-        sharedPreferences.edit().putBoolean("isLoggedIn",true).apply()
-    }
 
 
 
