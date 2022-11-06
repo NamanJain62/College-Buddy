@@ -64,7 +64,7 @@ class login_Activity : AppCompatActivity() {
 
             } else {
 
-                Toast.makeText(this@login_Activity, "InCorrect Passw,ord", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@login_Activity, "InCorrect Passw,hord", Toast.LENGTH_LONG).show()
 
             }
 
