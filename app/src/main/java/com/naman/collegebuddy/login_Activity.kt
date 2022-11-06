@@ -14,6 +14,7 @@ class login_Activity : AppCompatActivity() {
     lateinit var btnusrnme: EditText
     lateinit var btnpsswrd: EditText
     lateinit var btnlogin: Button
+    lateinit var btnForgotPsswrd: Button
 
     val validusrnme = "namanjainbr@gmail.com"
     val validpsswrd = "6203511374"
@@ -42,6 +43,7 @@ class login_Activity : AppCompatActivity() {
         btnusrnme = findViewById(R.id.btnusrnme)
         btnpsswrd = findViewById(R.id.btnpsswrd)
         btnlogin = findViewById(R.id.btnlogin)
+        btnForgotPsswrd = findViewById(R.id.btnForgotPsswrd)
 
         btnlogin.setOnClickListener {
 
@@ -68,6 +70,11 @@ class login_Activity : AppCompatActivity() {
 
             }
 
+        }
+
+        btnForgotPsswrd.setOnClickListener{
+            val intent = Intent(this@login_Activity,RegisterYourself::class.java)
+            startActivity(intent)
         }
     }
 

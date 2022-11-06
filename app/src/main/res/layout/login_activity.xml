@@ -87,7 +87,7 @@
     </Button>
 
     <Button
-        android:id="@+id/txtForgotPsswrd"
+        android:id="@+id/btnForgotPsswrd"
         android:layout_width="wrap_content"
         android:layout_height="62dp"
         android:layout_below="@+id/btnlogin"
