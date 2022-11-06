@@ -86,17 +86,18 @@
 
     </Button>
 
-    <TextView
+    <Button
         android:id="@+id/txtForgotPsswrd"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="62dp"
         android:layout_below="@+id/btnlogin"
-        android:text="Forget Password ?"
         android:layout_marginLeft="135dp"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/black">
+        android:layout_marginTop="31dp"
+        android:text="Register Yourself"
+        android:textColor="@color/black"
+        android:backgroundTint="#B8D7F0">
 
-    </TextView>
+    </Button>
 
     <LinearLayout
         android:layout_width="match_parent"
