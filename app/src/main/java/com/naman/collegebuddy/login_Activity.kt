@@ -18,13 +18,14 @@ class login_Activity : AppCompatActivity() {
 
     val validusrnme = "namanjainbr@gmail.com"
     val validpsswrd = "6203511374"
-    lateinit var sharedPreferences: SharedPreferences
+
+    lateinit var ref: SharedPreferences;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
-        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn",false)
+        ref = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
+        val isLoggedIn = ref.getBoolean("isLoggedIn",false)
 
         setContentView(R.layout.login_activity)
 
@@ -84,8 +85,8 @@ class login_Activity : AppCompatActivity() {
     }
 
     fun savePreferences(title: String){
-        sharedPreferences.edit().putString("title",title).apply()
-        sharedPreferences.edit().putBoolean("isLoggedIn",true).apply()
+        ref.edit().putString("title",title).apply()
+        ref.edit().putBoolean("isLoggedIn",true).apply()
     }
 
 
