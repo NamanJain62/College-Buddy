@@ -25,7 +25,6 @@ class RegisterYourself : AppCompatActivity() {
         txtname = findViewById(R.id.txtname)
         txtusername = findViewById(R.id.txtusername)
         etxtpassword = findViewById(R.id.etxtpassword)
-        etxtCfrmpaasword = findViewById(R.id.etxtCfrmpaasword)
         btnsignup =findViewById(R.id.btnsignup)
 
         sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),0)
@@ -34,14 +33,15 @@ class RegisterYourself : AppCompatActivity() {
             var txtnameValue = txtname.text.toString()
             val txtusernameValue = txtusername.text.toString()
             val etxtpasswordValue = etxtpassword.text.toString()
-            val etxtCfrmpasswordValue = etxtCfrmpaasword.text.toString()
             val intent = Intent(this@RegisterYourself, HomePage::class.java)
 
             sharedPreferences.edit().putString("name",txtnameValue).apply();
             sharedPreferences.edit().putString("mail",txtusernameValue).apply();
             sharedPreferences.edit().putString("password",etxtpasswordValue).apply();
-            sharedPreferences.edit().putString("Cfrmpassword",etxtCfrmpasswordValue).apply();
             sharedPreferences.edit().putBoolean("login",true).apply();
+
+            startActivity(intent);
+
 
 
         }

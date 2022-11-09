@@ -16,8 +16,7 @@ class login_Activity : AppCompatActivity() {
     lateinit var btnlogin: Button
     lateinit var btnForgotPsswrd: Button
 
-    val validusrnme = "namanjainbr@gmail.com"
-    val validpsswrd = "6203511374"
+
 
     lateinit var ref: SharedPreferences;
 
@@ -49,27 +48,13 @@ class login_Activity : AppCompatActivity() {
         btnlogin.setOnClickListener {
 
             var name = "College Buddy"
-            val username = btnusrnme.text.toString()
-            val password = btnpsswrd.text.toString()
+            btnusrnme.setText(ref.getString("name",""));
+            btnpsswrd.setText(ref.getString("password",""));
             val intent = Intent(this@login_Activity, HomePage::class.java)
-
-            if ((username == validusrnme)) {
-
-                when (password) {
-                    validpsswrd -> {
-                        name = "Naman Jain"
-                        savePreferences(name)
-                        intent.putExtra("Name", name)
-                        startActivity(intent)
-                    }
-                    else -> Toast.makeText(this@login_Activity, "InCorrect Password", Toast.LENGTH_LONG).show()
-                }
-
-            } else {
-
-                Toast.makeText(this@login_Activity, "InCorrect Passw,hord", Toast.LENGTH_LONG).show()
-
-            }
+            name = "Naman Jain"
+            savePreferences(name)
+            intent.putExtra("Name", name)
+            startActivity(intent)
 
         }
 

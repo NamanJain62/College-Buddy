@@ -12,7 +12,7 @@
             android:text="Sign Up"
             android:textSize="30sp"
             android:layout_gravity="center"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="250dp"
             android:textColor="@color/black"
             android:textStyle="bold">
 
@@ -33,7 +33,7 @@
         android:autofillHints="name"
         android:textColor="@color/black"
         android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold">
 
     </EditText>
@@ -53,7 +53,7 @@
         android:autofillHints="emailAddress"
         android:textColor="@color/black"
         android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold">
 
     </EditText>
@@ -73,35 +73,17 @@
         android:autofillHints="password"
         android:textColor="@color/black"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold">
 
     </EditText>
 
-    <EditText
-        android:id="@+id/etxtCfrmpaasword"
-        android:layout_width="300dp"
-        android:layout_height="47dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#D2D2D2"
-        android:inputType="textPassword"
-        android:hint="    Confirm password"
-        android:textColorHint="#404258"
-        android:autofillHints="name"
-        android:textColor="@color/black"
-        android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:textSize="25sp"
-        android:textStyle="bold">
 
-    </EditText>
 
     <Button
         android:id="@+id/btnsignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:layout_marginTop="15dp"
         android:text="Sign-Up"
         android:textColor="@color/black"
