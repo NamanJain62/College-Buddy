@@ -91,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="62dp"
         android:layout_below="@+id/btnlogin"
-        android:layout_marginLeft="135dp"
+        android:layout_marginLeft="105dp"
         android:layout_marginTop="31dp"
         android:text="Register Yourself"
         android:textColor="@color/black"
