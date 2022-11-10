@@ -16,15 +16,15 @@ class login_Activity : AppCompatActivity() {
     lateinit var btnlogin: Button
     lateinit var btnForgotPsswrd: Button
 
-
-
-    lateinit var ref: SharedPreferences;
+    val validusername = "namanjainbr@gmail.com"
+    val validpassword = "6203511374"
+    lateinit var sharedPreferences: SharedPreferences;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        ref = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
-        val isLoggedIn = ref.getBoolean("isLoggedIn",false)
+        sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn",false)
 
         setContentView(R.layout.login_activity)
 
@@ -47,15 +47,30 @@ class login_Activity : AppCompatActivity() {
 
         btnlogin.setOnClickListener {
 
-            var name = "College Buddy"
-            btnusrnme.setText(ref.getString("name",""));
-            btnpsswrd.setText(ref.getString("password",""));
-            val intent = Intent(this@login_Activity, HomePage::class.java)
-            name = "Naman Jain"
-            savePreferences(name)
-            intent.putExtra("Name", name)
-            startActivity(intent)
+            val username = btnusrnme.text.toString()
 
+            val password = btnpsswrd.text.toString()
+
+            var nameOfAvenger = "Avenger"
+
+            val intent = Intent(this@login_Activity,HomePage::class.java)
+
+            if ((username == validusername )) {
+
+                when (password) {
+                    validpassword -> {
+                        startActivity(intent)
+
+                    }
+
+                    else -> Toast.makeText(this@login_Activity, "Incorrect Password", Toast.LENGTH_LONG).show()
+                }
+
+            } else {
+
+                Toast.makeText(this@login_Activity, "Incorrect Credentials", Toast.LENGTH_LONG).show()
+
+            }
         }
 
         btnForgotPsswrd.setOnClickListener{
@@ -69,10 +84,6 @@ class login_Activity : AppCompatActivity() {
         finish()
     }
 
-    fun savePreferences(title: String){
-        ref.edit().putString("title",title).apply()
-        ref.edit().putBoolean("isLoggedIn",true).apply()
-    }
 
 
 

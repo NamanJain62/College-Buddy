@@ -6,14 +6,8 @@ import android.os.Bundle
 
 class HomePage : AppCompatActivity() {
     var titleName: String? = "College Buddy"
-    lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        sharedPreferences = getSharedPreferences(getString(R.string.preferences_file_name),MODE_PRIVATE)
         setContentView(R.layout.activity_home_page)
-
-        titleName = sharedPreferences.getString("Title","College Buddy")
-
-        title = titleName
     }
 }
