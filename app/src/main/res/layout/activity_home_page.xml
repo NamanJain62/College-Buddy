@@ -1,312 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFF5F5">
+    android:layout_margin="8dp">
 
-    <LinearLayout
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/title_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/csbs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundCorner"/>
+    
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Canditate Biden Called Saudi Arabia a paefr"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/title_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="1dp"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_image"
+        android:background="#d8d6d6"
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/vewCSBS"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgCSBS"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/csbs" />
-
-            <TextView
-                android:id="@+id/txtCSBS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/imgCSBS"
-                android:text="Computer Science and Business System"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:id="@+id/txtSpec"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="63dp"
-                android:layout_toRightOf="@id/imgCSBS"
-                android:text="Specialization Course"
-                android:textStyle="bold"
-                android:textColor="#1b5e20"
-                android:textSize="14sp" />
-
-            <TextView
-            android:id="@+id/txtRating1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:layout_toRightOf="@+id/imgCSBS"
-            android:text="Rating "
-            android:textSize="12sp"
-            android:textStyle="bold"
-            android:textColor="#f57c00"/>
-
-            <TextView
-                android:id="@+id/txtRating2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
-                android:layout_toRightOf="@+id/txtRating1"
-                android:layout_marginLeft="5dp"
-                android:text="4.3"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="#ff1744"/>
-
-
-        </RelativeLayout>
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/vewDSA"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgDSA"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/dsa"/>
-
-            <TextView
-                android:id="@+id/txtDSA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/imgDSA"
-                android:text="Data Structure And Algorithm"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:id="@+id/txtspec2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/imgDSA"
-                android:text="Placement Drive"
-                android:textStyle="bold"
-                android:textColor="#1b5e20"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/txtRating3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/imgDSA"
-                android:text="Rating"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="#f57c00"/>
-
-            <TextView
-                android:id="@+id/txtRating4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/txtRating3"
-                android:text="4.1"
-                android:layout_marginLeft="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="#ff1744"/>
-
-        </RelativeLayout>
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/vewBDA"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgBDA"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/bda1"/>
-
-            <TextView
-                android:id="@+id/txtBDA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/imgBDA"
-                android:text="Big-Data Analyst"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:id="@+id/txtspec3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/imgBDA"
-                android:text="Specialization"
-                android:textColor="#1b5e20"
-                android:textStyle="bold"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/txtRating5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/imgBDA"
-                android:text="Rating"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="#f57c00"/>
-
-            <TextView
-                android:id="@+id/txtRating6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/txtRating5"
-                android:text="4.0"
-                android:layout_marginLeft="5dp"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="#ff1744"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgBlackPanther"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/cs"/>
-
-            <TextView
-                android:id="@+id/txtBlackPanther"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/imgBlackPanther"
-                android:text="Coming Soon"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtIdPanther"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/imgBlackPanther"
-                android:text=".........."
-                android:textColor="#1b5e20"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/txtPhoneno3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/imgBlackPanther"
-                android:text=".........."
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgHulk"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/cs"/>
-
-            <TextView
-                android:id="@+id/txtHulk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/imgHulk"
-                android:text="Coming Soon"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtIdHulk"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/imgHulk"
-                android:text=".........."
-                android:textColor="#1b5e20"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/txtPhoneno4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/imgHulk"
-                android:text=".........."
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgWidow"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/cs"/>
-
-            <TextView
-                android:id="@+id/txtWidow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_toRightOf="@id/imgWidow"
-                android:text="Coming Soon"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtIdWidow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/imgWidow"
-                android:text=".........."
-                android:textColor="#1b5e20"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/txtPhoneno5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_toRightOf="@+id/imgWidow"
-                android:text=".........."
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-    </LinearLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
