@@ -61,9 +61,6 @@ class HomePage : AppCompatActivity() {
                 //Toast.makeText(this@HomePage,"You clicked on item no. $position", Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(this@HomePage,detailCourse::class.java)
-                intent.putExtra("heading",newArrayList[position].heading)
-                intent.putExtra("imageId",newArrayList[position].titleImage)
-                intent.putExtra("Course",Course)
                 startActivity(intent)
 
             }
