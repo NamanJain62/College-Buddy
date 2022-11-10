@@ -1,5 +1,6 @@
 package com.naman.collegebuddy
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ class HomePage : AppCompatActivity() {
     private lateinit var newArrayList: java.util.ArrayList<Course>
     lateinit var imageId : Array<Int>
     lateinit var heading: Array<String>
+    lateinit var Course : Array<String>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +38,7 @@ class HomePage : AppCompatActivity() {
             "-------------","-------------","-------------"
         )
 
+
         newRecyclerView = findViewById(R.id.recyclerview)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
@@ -55,7 +58,14 @@ class HomePage : AppCompatActivity() {
         newRecyclerView.adapter= adapter
         adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                Toast.makeText(this@HomePage,"You clicked on item no. $position", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@HomePage,"You clicked on item no. $position", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this@HomePage,detailCourse::class.java)
+                intent.putExtra("heading",newArrayList[position].heading)
+                intent.putExtra("imageId",newArrayList[position].titleImage)
+                intent.putExtra("Course",Course)
+                startActivity(intent)
+
             }
         })
     }
