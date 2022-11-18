@@ -27,6 +27,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/desc1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/txtunit1"
@@ -54,6 +55,7 @@ Abstract algebra: Set, relation, group, ring, field."
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/desc2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/txtunit2"
@@ -81,10 +83,11 @@ Graph Theory: Graphs and digraphs, complement, isomorphism, connectedness and re
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/desc3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/txtunit3"
-                android:text="Logic: Propositional calculus - propositions and connectives, syntax; Semantics - truthassignments and truth tables, validity and satisfiability, tautology; Adequate set of connectives; Equivalence and normal forms; Compactness and resolution; Formal reducibility - natural deduction system and axiom system; Soundness and completeness."
+                android:text="Logic:Propositional calculus - propositions and connectives, syntax; Semantics - truthassignments and truth tables, validity and satisfiability, tautology; Adequate set of connectives; Equivalence and normal forms; Compactness and resolution; Formal reducibility - natural deduction system and axiom system; Soundness and completeness."
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:padding="5dp"

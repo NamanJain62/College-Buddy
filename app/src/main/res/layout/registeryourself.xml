@@ -67,7 +67,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="#D2D2D2"
-        android:inputType="textEmailAddress"
+        android:inputType="textPassword"
         android:hint="    Enter your password"
         android:textColorHint="#404258"
         android:autofillHints="password"

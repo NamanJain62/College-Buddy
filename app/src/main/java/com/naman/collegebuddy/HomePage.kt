@@ -32,7 +32,7 @@ class HomePage : AppCompatActivity() {
         )
 
         heading= arrayOf(
-            "Computer Science and Business System  (Dpecialization course)",
+            "Computer Science and Business System  (Specialization course)",
             "Data Structure And Algorithm  (Placement Drive)",
             "Big-Data Analyst  (Specialization course)",
             "-------------","-------------","-------------"
